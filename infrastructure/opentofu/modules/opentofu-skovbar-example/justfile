@@ -1,0 +1,12 @@
+default:
+    just --list
+
+configure:
+    tofu init
+
+validate:
+    tofu fmt -check .
+    tofu validate
+
+fix:
+    tofu fmt -recursive .
